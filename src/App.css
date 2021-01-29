@@ -1,0 +1,154 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.grid {
+  margin: 1em;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2px;
+}
+
+
+/* spanning cols, complete values missing */
+
+.col-2 {
+  grid-column: auto/span 2;
+}
+
+.col-3 {
+  grid-column: auto/span 3;
+}
+
+.col-6 {
+  grid-column: auto/span 6;
+}
+
+.col-8 {
+  grid-column: auto/span 8;
+}
+
+
+/* spanning rows , complete values missing*/
+
+.row-2 {
+  grid-row: auto/span 2;
+}
+
+.small {
+  font-size: small;
+  color: #747577;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333333; */
+}
+
+li {
+  float: left;
+  display: block;
+  /* color: white; */
+  /* text-align: center; */
+  padding: 1px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+.btn {
+  background-color: #4cb97f;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #cffde6;
+}
+
+.btn-green {
+  background-color: #4cb97f;
+  padding: 5px;
+  min-width: 30%;
+  border-radius: 50px;
+  color: #cffde6;
+}
+
+.btn-gray {
+  background-color: #e6ebef;
+  padding: 5px;
+  min-width: 30%;
+  border-radius: 50px;
+  color: #5c6165;
+}
+
+.word h1 {
+  font-size: xxx-large;
+}
+
+.word p {
+  max-width: 65%;
+}
+
+.slider div {
+  position: absolute;
+  top: calc(50% - 50px);
+  background: #fff;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  ;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  /* opacity: .5; */
+  border-radius: 50%;
+}
+
+.prev {
+  right: -70px;
+}
+
+.next {
+  left: -70px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.modal-body {
+  padding: 10px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 10px;
+}
