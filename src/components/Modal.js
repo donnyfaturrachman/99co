@@ -53,7 +53,7 @@ const Modal = props => {
                                 alt="new"
                             />
                         </div>
-                        <div className="col-3">
+                        <div className="">
                             <button className="btn-gray">Dijual</button>
                             <button className="btn-green">Nego</button>
                             <img style={imgStyleLove} src={iconLove} alt="icon love"></img>

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -5,37 +9,36 @@
   margin-left: auto;
 }
 
-.grid {
-  margin: 1em;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 2px;
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
 }
 
-
-/* spanning cols, complete values missing */
-
-.col-2 {
-  grid-column: auto/span 2;
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }
 
-.col-3 {
-  grid-column: auto/span 3;
+[class*="col-"] {
+  float: left;
+  padding: 15px;
 }
 
-.col-6 {
-  grid-column: auto/span 6;
-}
-
-.col-8 {
-  grid-column: auto/span 8;
-}
-
-
-/* spanning rows , complete values missing*/
-
-.row-2 {
-  grid-row: auto/span 2;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .small {
@@ -104,10 +107,9 @@ li a:hover {
   top: calc(50% - 50px);
   background: #fff;
   color: #fff;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   padding: 10px;
-  ;
   font-size: 10px;
   text-align: center;
   cursor: pointer;
@@ -152,3 +154,16 @@ button {
   border-bottom: 1px solid #eeeeee;
   border-radius: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .slider div {
+    top: calc(50% - 120px);
+  }
+  .prev {
+    right: 0;
+  }
+  
+  .next {
+    left: 0;
+  }
+} 

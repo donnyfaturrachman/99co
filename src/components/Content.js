@@ -20,17 +20,19 @@ const Content = ({ styles }) => {
 
     return (
         <div style={contentStyle} className="container grid">
-            <div className="col-2"></div>
-            {posts.map((post, i) => {
-                return (
-                    <div key={i} className="col-6 word">
-                        <h1 style={{ marginBottom: 0 }}>{post.title}</h1>
-                        <p>{post.summary}</p>
-                    </div>
-                );
-            })}
-            {/* <div className="col-6">dsadsa</div> */}
-            <Card styles={styles} />
+            <div className="row">
+                <div className="col-1"></div>
+                {posts.map((post, i) => {
+                    return (
+                        <div key={i} className="col-6 word">
+                            <h1 style={{ marginBottom: 0 }}>{post.title}</h1>
+                            <p>{post.summary}</p>
+                        </div>
+                    );
+                })}
+                {/* <div className="col-6">dsadsa</div> */}
+                <Card styles={styles} />
+            </div>
         </div>
     );
 };
